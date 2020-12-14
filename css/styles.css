@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* Цвет основного текста #757575; */
 /* Вторичный цвет текста #212121; */
 /* Белый #FFFFFF; */
@@ -22,6 +17,13 @@
   --black-color: #000000;
   --button-color: #f5f4fa;
 }
+
+body {
+  letter-spacing: 0.03em;
+  font-family: "Roboto", sans-serif;
+  /* outline: 1px solid red; */
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -33,22 +35,11 @@ ul {
   list-style: none;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  letter-spacing: 0.03em;
-  font-family: Roboto, sans-serif;
-  margin: 0;
-  padding: 0;
-  /* outline: 1px solid red; */
 }
 
 nav {
@@ -57,7 +48,7 @@ nav {
 }
 
 .container {
-  width: 1200px;
+  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -86,7 +77,7 @@ nav {
 
 .logo {
   color: var(--accent-color);
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -120,16 +111,8 @@ nav {
   color: var(--accent-color);
 }
 
-/* .header-nav li:not(:last-child),
-.contacts li:not(:last-child) {
-    margin-right: 50px;
-} */
-/* .header-nav {
-  padding-top: 25px;
-  padding-bottom: 25px;
-} */
-
 .link {
+  position: relative;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -137,17 +120,32 @@ nav {
   letter-spacing: 0.02em;
   padding: 32px 0;
 }
+
 .current {
+  position: relative;
   color: var(--accent-color);
 }
-.site-link {
-  position: relative;
+
+.current::before {
   display: block;
-  padding: 5px 5px;
+  content: "";
+  width: 100%;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 15px;
+  background-color: #2196f3;
+}
+
+.site-link {
   text-decoration: none;
   color: currentColor;
 }
-.site-link::after {
+
+.link::after {
+  display: block;
   content: "";
   width: 100%;
   height: 4px;
@@ -157,8 +155,11 @@ nav {
   bottom: 0;
   border-radius: 15px;
   background-color: #2196f3;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.site-link:hover::after {
+
+.link:hover::after,
+.link:focus::after {
   opacity: 1;
 }
 
@@ -168,6 +169,7 @@ nav {
 .social-links:focus {
   color: var(--accent-color);
 }
+
 .social-links {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -178,11 +180,13 @@ nav {
   align-items: center;
   justify-content: center;
 }
+
 .icon-e-mail {
   display: inline-flex;
   margin-right: 10px;
   fill: currentColor;
 }
+
 .icon-tel {
   display: inline-flex;
   margin-right: 10px;
@@ -194,6 +198,7 @@ nav {
 .hero h1 {
   font-size: 44px;
 }
+
 .hero {
   background-color: var(--primary-background-color);
   color: var(--white-color);
@@ -217,10 +222,11 @@ nav {
   padding-top: 200px;
   padding-bottom: 200px;
 }
+
 .order-service {
   background-color: var(--accent-color);
   color: var(--white-color);
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   width: 200px;
@@ -243,18 +249,22 @@ nav {
   line-height: 1.14;
   margin-bottom: 10px;
 }
+
 .job-description {
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.71;
 }
+
 .description-active {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .about {
   padding-bottom: 94px;
 }
+
 .description {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -264,6 +274,7 @@ nav {
   line-height: 1.2;
   text-align: center;
 }
+
 .broadcast {
   background-color: var(--secondary-background-color);
   display: flex;
@@ -287,17 +298,15 @@ nav {
   font-size: 36px;
   line-height: 1.17;
 }
+
 .our-people {
   display: flex;
   margin: -15px;
   font-size: 16px;
   line-height: 1.19;
   list-style: none;
-  /* margin: 0;
-  padding: 0; */
-  /* text-align: center;
-  align-items: center; */
 }
+
 .box {
   background-color: var(--white-color);
   width: 270px;
@@ -306,6 +315,7 @@ nav {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
 .box-img {
   width: 270px;
 }
@@ -325,21 +335,25 @@ nav {
   font-weight: 500;
   margin-top: 30px;
 }
+
 .profession {
   background-color: var(--white-color);
   color: var(--primary-text-color);
   font-weight: 400;
   margin-bottom: 20px;
 }
+
 .icon-social {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .icon-title {
   margin-right: 10px;
 }
+
 .icon-list {
   display: flex;
   align-items: center;
@@ -347,15 +361,18 @@ nav {
   width: 44px;
   height: 44px;
   fill: #afb1b8;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
+
 .icon-list:not(:last-child) {
   margin-right: 10px;
 }
+
 .icon-list:hover,
 .icon-list:focus {
-  fill: #fff;
+  fill: var(--white-color);
   background-color: #2196f3;
-  border-radius: 50%;
 }
 
 /* Постоянные клиенты */
@@ -366,18 +383,24 @@ nav {
   padding-bottom: 94px;
   margin: 0;
 }
+
 .clients-list {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: -30px;
 }
+
 .clients-item {
   list-style: none;
   align-items: center;
   box-align: center;
   justify-content: center;
 }
+
+.clients-item + .clients-item {
+  margin-left: 30px;
+}
+
 .clients {
   fill: #afb1b8;
   width: 170px;
@@ -387,8 +410,8 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
 }
+
 .clients:hover,
 .clients:focus {
   fill: #2196f3;
@@ -408,16 +431,19 @@ nav {
   display: flex;
   align-items: baseline;
 }
+
 .footer-contacts {
   margin-right: 70px;
 }
+
 .logo-continuation-conclusion {
   color: var(--white-color);
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 1.38;
 }
+
 .address {
   color: var(--white-color);
   font-weight: 400;
@@ -426,6 +452,7 @@ nav {
   margin-top: 20px;
   line-height: 1.71;
 }
+
 .link-current-name,
 .social-links-name {
   color: rgba(255, 255, 255, 0.6);
@@ -435,6 +462,14 @@ nav {
   margin-top: 10px;
   line-height: 1.71;
 }
+
+.link-current-name:hover,
+.link-current-name:focus,
+.social-links-name:hover,
+.social-links-name:focus {
+  color: var(--accent-color);
+}
+
 .appeal {
   text-transform: uppercase;
   width: 206px;
@@ -442,9 +477,10 @@ nav {
   align-items: left;
   justify-content: left;
 }
+
 .appeal-name {
   color: var(--white-color);
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 20px;
@@ -455,10 +491,12 @@ nav {
 .header-line {
   border-bottom: 1px solid #ececec;
 }
+
 .portfolio-title {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .conteiner-portfolio {
   width: 1200px;
   align-items: center;
@@ -467,30 +505,36 @@ nav {
   margin-left: auto;
   margin-right: auto;
 }
+
 .hero-portfolio {
   width: 1170px;
   align-items: center;
   text-align: center;
 }
+
 .button-title {
   margin-right: 8px;
 }
+
 .button-list {
   margin-bottom: 50px;
 }
+
 .button-list button:hover {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--white-color);
   background-color: var(--accent-color);
 }
+
 .button-list button:focus {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--white-color);
   background-color: var(--accent-color);
   flex-direction: row;
 }
+
 .button-list button {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--button-color);
   color: var(--title-text-color);
   font-weight: 500;
@@ -505,22 +549,21 @@ nav {
   width: 128px;
   height: 38px;
 }
+
 button {
   position: center;
   display: inline-block;
   font-family: inherit;
   cursor: pointer;
-  align-items: center;
   text-align: center;
 }
+
 .button-list {
   display: flex;
   list-style: none;
   justify-content: center;
 }
-li {
-  text-align: -webkit-match-parent;
-}
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -528,34 +571,39 @@ li {
   margin-left: -30px;
   margin-bottom: -30px;
 }
+
 .image-portfolio {
   width: 370px;
   border: 1px solid #eeeeee;
   margin-left: 30px;
   margin-bottom: 30px;
 }
+
 .portfolio-box:hover,
 .portfolio-box:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .title-description {
   padding: 24px;
 }
+
 .name-title {
   color: var(--title-text-color);
   text-align: left;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 6%;
+  letter-spacing: 0, 06em;
   margin: 0;
 }
+
 .description-name {
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 3%;
+  letter-spacing: 0, 03em;
   margin: 0;
 }
