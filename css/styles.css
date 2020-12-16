@@ -227,6 +227,7 @@ nav {
 }
 
 .order-service {
+  display: inline-block;
   background-color: var(--accent-color);
   color: var(--white-color);
   font-family: "Roboto", sans-serif;
@@ -234,11 +235,13 @@ nav {
   font-size: 16px;
   width: 200px;
   height: 50px;
-  line-height: 1.88;
+  line-height: 1.87;
   box-align: center;
   text-align: center;
   padding: 10px, 32px;
+  letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
   border-radius: 4px;
   margin-top: 45px;
 }
@@ -278,33 +281,27 @@ nav {
   text-align: center;
 }
 
-.product-thumb {
+.image {
   position: relative;
+}
+.product-thumb {
+  display: flex;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
   align-items: center;
-  letter-spacing: 0.03em;
-  bottom: 24%;
-  width: 100%;
-  color: #ffffff;
-  /* z-index: 2; */
-  transform: translate(0%, 30%);
-}
-.product-thumb::before {
-  display: inline-block;
-  content: "";
+  justify-content: center;
+  margin: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  bottom: 0;
+  letter-spacing: 0.03em;
+  width: 370px;
   height: 70px;
+  color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
-  fill: #2f303a;
-  /* z-index: 1; */
+  text-transform: uppercase;
 }
 
 .broadcast {
@@ -511,6 +508,31 @@ nav {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 20px;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primery-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.modal-icon {
+  background-color: #fff;
+}
+.close-icon {
+  color: #000000;
 }
 
 /* Портфолио */

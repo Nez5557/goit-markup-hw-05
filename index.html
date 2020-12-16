@@ -61,7 +61,7 @@
                     ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br />
                     ДЛЯ ВАШЕГО БИЗНЕСА
                 </h1>
-                <button class="order-service">Заказать услугу</button>
+                <button class="order-service" data-modal-open>Заказать услугу</button>
             </section>
             <section class="description-active">
                 <div class="container">
@@ -71,8 +71,8 @@
                             <div class="broadcast">
                                 <svg width="70px" height="70px" class="">
                                     <use
-                                        href="./images-3/sprite.svg#antenna"
-                                    ></use>
+                                        href="./images-3/sprite.svg#antenna">
+                                    </use>
                                 </svg>
                             </div>
                             <h3 class="our-work">ВНИМАНИЕ К ДЕТАЛЯМ</h3>
@@ -85,8 +85,8 @@
                             <div class="broadcast">
                                 <svg width="70px" height="70px" class="">
                                     <use
-                                        href="./images-3/sprite.svg#time"
-                                    ></use>
+                                        href="./images-3/sprite.svg#time">
+                                    </use>
                                 </svg>
                             </div>
                             <h3 class="our-work">ПУНКТУАЛЬНОСТЬ</h3>
@@ -99,8 +99,8 @@
                             <div class="broadcast">
                                 <svg width="70px" height="70px" class="">
                                     <use
-                                        href="./images-3/sprite.svg#diagramma"
-                                    ></use>
+                                        href="./images-3/sprite.svg#diagramma">
+                                    </use>
                                 </svg>
                             </div>
                             <h3 class="our-work">ПЛАНИРОВАНИЕ</h3>
@@ -113,8 +113,8 @@
                             <div class="broadcast">
                                 <svg width="70px" height="70px" class="">
                                     <use
-                                        href="./images-3/sprite.svg#astronavt"
-                                    ></use>
+                                        href="./images-3/sprite.svg#astronavt">
+                                    </use>
                                 </svg>
                             </div>
                             <h3 class="our-work">СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</h3>
@@ -136,7 +136,7 @@
                                 alt="img1"
                                 width="370"
                             />
-                            <div class="product-thumb">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</div>
+                            <p class="product-thumb">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
                         </li>
                         <li class="image">
                             <img
@@ -144,7 +144,7 @@
                                 alt="img2"
                                 width="370"
                             />
-                            <div class="product-thumb">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</div>
+                            <p class="product-thumb">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
                         </li>
                         <li class="image">
                             <img
@@ -152,7 +152,7 @@
                                 alt="img3"
                                 width="370"
                             />
-                            <div class="product-thumb">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</div>
+                            <p class="product-thumb">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
                         </li>
                     </ul>
                 </div>
@@ -565,5 +565,19 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <p></p>
+                <button type="button" class="close-button" data-modal-close>
+                    <svg class="modal-icon" widht="11" height="11">
+                      <use href="./images-3/sprite.svg#Form-bg"></use>
+                    </svg>
+                    <svg class="close-icon">
+                        <use href="./images-3/sprite.svg#close-black-18dp-2-1"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+      <script src="./js/modal.js"></script>
     </body>
 </html>
