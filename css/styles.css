@@ -166,10 +166,10 @@ nav {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link:hover::after,
+/* .link:hover::after,
 .link:focus::after {
   opacity: 1;
-}
+} */
 
 .link:hover,
 .link:focus,
@@ -563,14 +563,6 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.modal-icon {
-  background-color: #212121;
-}
-.close-icon {
-  width: 18px;
-  height: 18px;
-  fill: #000000;
-}
 
 /* Портфолио */
 
@@ -711,7 +703,7 @@ button {
   transform: translateY(0);
 }
 
-.portofolio-box:hover,
+.portfolio-box:hover,
 .portfolio-box:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
