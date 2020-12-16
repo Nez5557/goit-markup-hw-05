@@ -667,7 +667,6 @@ button {
 }
 
 .portfolio-text {
-  padding: 63px, 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -675,10 +674,15 @@ button {
   color: var(--white-color);
   background-color: rgba(33, 150, 243, 0.9);
   position: absolute;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   margin: 0;
+  top: 0;
+  left: 0;
   width: 370px;
   height: 294px;
+  padding: 63px 24px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
   transform: translateY (100%);
