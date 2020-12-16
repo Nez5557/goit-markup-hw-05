@@ -18,6 +18,12 @@
   --button-color: #f5f4fa;
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 body {
   letter-spacing: 0.03em;
   font-family: "Roboto", sans-serif;
@@ -661,6 +667,7 @@ button {
   position: relative;
   overflow: hidden;
 }
+
 .cards-overlay {
   position: absolute;
   padding: 63px 24px;
@@ -678,7 +685,6 @@ button {
 }
 
 .portfolio-text {
-  box-sizing: border-box;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
@@ -696,13 +702,18 @@ button {
   transform: translateY (100%);
 }
 
-.portfolio-text:hover,
-.portfolio-text:focus .portfolio-box:hover,
+.portofolio-box:hover,
 .portfolio-box:focus {
-  top: 0;
-  left: 0;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+portfolio-box:hover portfolio-text {
+  transform: translateY (0);
+}
+
+portfolio-box:focus portfolio-text {
+  transform: translateY (0);
 }
 
 .title-description {
