@@ -98,6 +98,7 @@ nav {
   font-size: 26px;
   line-height: 1.19;
   margin-right: 85px;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Студио-портфолио-контакты-e-mail-телефон */
@@ -129,11 +130,13 @@ nav {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current {
   position: relative;
   color: var(--accent-color);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current::before {
@@ -191,6 +194,7 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-e-mail {
@@ -392,6 +396,7 @@ nav {
   fill: #afb1b8;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-list:not(:last-child) {
@@ -442,6 +447,7 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients:hover,
@@ -475,6 +481,7 @@ nav {
   font-weight: 400;
   font-size: 26px;
   line-height: 1.38;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address {
@@ -494,6 +501,7 @@ nav {
   font-size: 14px;
   margin-top: 10px;
   line-height: 1.71;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-current-name:hover,
@@ -683,6 +691,7 @@ button {
 } 
 
 .portfolio-text {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
@@ -692,7 +701,7 @@ button {
   position: absolute;
   justify-content: center;
   align-items: center;
-  bottom: 0;
+  top: 0;
   margin: 0;
   height: 100%;
   padding: 63px 24px;
@@ -724,6 +733,7 @@ button {
 
 .name-title {
   color: var(--title-text-color);
+  font-family: "Roboto", sans-serif;
   text-align: left;
   font-weight: 700;
   font-size: 18px;
@@ -734,6 +744,7 @@ button {
 
 .description-name {
   color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
